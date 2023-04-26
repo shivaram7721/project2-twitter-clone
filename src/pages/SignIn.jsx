@@ -27,7 +27,16 @@ export default function SignIn() {
 
   return (
     <ThemeProvider theme={theme}>
-      <Container component="main" maxWidth="xs">
+      <Container
+        component="main"
+        maxWidth="xs"
+        sx={{
+          border: "1px solid",
+          marginTop: "2rem",
+          paddingBottom: "3rem",
+          borderRadius: "5%",
+        }}
+      >
         <CssBaseline />
         <Box
           sx={{
@@ -35,7 +44,6 @@ export default function SignIn() {
             display: "flex",
             flexDirection: "column",
             alignItems: "center",
-            
           }}
         >
           <Avatar sx={{ m: 1, bgcolor: "secondary.main" }}>
@@ -77,12 +85,10 @@ export default function SignIn() {
           >
             <AppleIcon sx={{ marginRight: "5px" }} />
             Sign in with Apple
-            
           </Button>
-          <Typography sx={{mt:"1rem"}}>
-           or
-          </Typography>
-         
+
+          <Typography sx={{ mt: "1rem" }}>or</Typography>
+
           <Box
             component="form"
             onSubmit={handleSubmit}
@@ -120,9 +126,8 @@ export default function SignIn() {
                 borderRadius: "60px",
                 width: "25rem",
                 height: "3rem",
-                color: "white",
+                color: "green",
                 backgroundColor: "black",
-                
               }}
             >
               Sign In
@@ -141,10 +146,10 @@ export default function SignIn() {
               Forgot password?
             </Button>
 
-            <Grid container>
-              <Grid item sx={{ marginTop: "3rem" }}>
+            <Grid lg={12} item container>
+              <Grid item lg={12} xs={12} sx={{ marginTop: "3rem" }}>
                 <span>Don't have an account?</span>
-                <Link href="#" variant="body2">
+                <Link href="/signup" variant="body2">
                   <span>Sign up</span>
                 </Link>
               </Grid>
