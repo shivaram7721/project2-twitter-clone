@@ -1,0 +1,61 @@
+.Regcontainer {
+    display: flex;
+    flex-direction: column;
+    background-color: antiquewhite;
+    height: 97vh;
+    align-items: center;
+    justify-content: center;
+    background-color: rgb(49, 48, 48);
+}
+
+.formReg {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    /* border: 1px solid white; */
+    border-radius: 15px;
+    gap: 1rem;
+    background-color: black;
+    padding: 2rem;
+    height: 80vh;
+    width: 30vw;
+}
+
+.formContainer {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+    /* border: 1px solid white; */
+}
+
+.inputReg {
+    width: 20vw;
+    height: 6vh;
+    border-radius: 7px;
+    border: 1px solid grey;
+    padding-left: 1rem;
+    background-color: black;
+    color: white;
+}
+
+.headReg {
+    color: white;
+    font-weight: 900;
+    font-family: 'Trebuchet MS', 'Lucida Sans Unicode', 'Lucida Grande', 'Lucida Sans', Arial, sans-serif;
+}
+
+.btnReg {
+    border: none;
+    width: 18.5rem;
+    height: 6vh;
+    border-radius: 20px;
+    font-weight: 900;
+    font-family: 'Franklin Gothic Medium', 'Arial Narrow', Arial, sans-serif;
+    font-size: 1rem;
+}
+
+.errMsg {
+    color: red;
+    font-size: .8rem;
+}
