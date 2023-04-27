@@ -1,4 +1,4 @@
-import React from "react";
+import React, { useState, useEffect } from "react";
 import rightCard from "./FirstRightCard.module.css";
 
 export default function FirstRightCard() {
@@ -21,28 +21,68 @@ export default function FirstRightCard() {
           />
         </div>
       </div>
-      <Trending/>
-      <Trending/>
-      <Trending/>
-      {/* <Trending/> */}
-      <a href="" className={rightCard.anch}>Show more</a>
+      <Trending limit={3} />
+      {/* <a href="" className={rightCard.anch}>
+        Show more
+      </a> */}
     </div>
   );
 }
 
-function Trending() {
+function Trending({ limit }) {
+  const [trend, setTrend] = useState([]);
+  const [isError, setIsError] = useState("");
+
+  async function handleData() {
+    try {
+      const res = await fetch("/trends.json");
+      const data = await res.json();
+      setTrend(data.slice(0, limit));
+    } catch (error) {
+      console.log(error);
+      setIsError(error.message);
+    }
+  }
+
+  useEffect(() => {
+    handleData();
+  }, [limit]);
+  
+  function handleShowMore() {
+    setTrend((prevTrend) => {
+      const startIndex = prevTrend.length;
+      const remainingUsers = users.slice(startIndex, startIndex + 3);
+      return [...prevTrend, ...remainingUsers];
+    });
+  }
+
   return (
-    <div>
-      <div className={rightCard.trend} 
-      // style={{display:"flex", justifyContent:"space-between"}}
-      >
+    <>
+      {/* <div className={rightCard.trend} >
         <span>Trending in India</span>
         <span>...</span>
       </div>
 
       <h3 className={rightCard.thirdHead}>#WhatsApp</h3>
-      <p className={rightCard.para}>10.9K Tweets</p>
+      <p className={rightCard.para}>10.9K Tweets</p> */}
 
-    </div>
+      {trend.map((ele, i) => (
+        <div>
+          <div className={rightCard.trend}>
+            <span>Trending in {ele.country_name}</span>
+            <span>...</span>
+          </div>
+
+          <h3 className={rightCard.thirdHead}> #{ele.states_name}</h3>
+          <p className={rightCard.para}>{ele.tweet_counts}K Tweets</p>
+        </div>
+      ))}
+       {trend.length < limit ? null : (
+        // <button onClick={handleShowMore}>Show more</button>
+        <a href="" onClick={handleShowMore} className={rightCard.anch}>
+        Show more
+      </a>
+      )}
+    </>
   );
 }
