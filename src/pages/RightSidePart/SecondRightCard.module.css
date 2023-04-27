@@ -1,6 +1,7 @@
 .mainDiv{
     /* maxWidth:"25rem" */
     max-width: 25rem;
+    min-width: 20rem;
     border: 1px solid;
     border-radius: 5%;
     padding: 2rem;

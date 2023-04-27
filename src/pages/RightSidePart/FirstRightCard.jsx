@@ -51,23 +51,15 @@ function Trending({ limit }) {
   function handleShowMore() {
     setTrend((prevTrend) => {
       const startIndex = prevTrend.length;
-      const remainingUsers = users.slice(startIndex, startIndex + 3);
+      const remainingUsers = trend.slice(startIndex, startIndex + 3);
       return [...prevTrend, ...remainingUsers];
     });
   }
 
   return (
     <>
-      {/* <div className={rightCard.trend} >
-        <span>Trending in India</span>
-        <span>...</span>
-      </div>
-
-      <h3 className={rightCard.thirdHead}>#WhatsApp</h3>
-      <p className={rightCard.para}>10.9K Tweets</p> */}
-
       {trend.map((ele, i) => (
-        <div>
+        <div key={ele.tweet_counts}>
           <div className={rightCard.trend}>
             <span>Trending in {ele.country_name}</span>
             <span>...</span>
