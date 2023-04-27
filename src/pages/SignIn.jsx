@@ -27,7 +27,13 @@ export default function SignIn() {
 
   return (
     <ThemeProvider theme={theme}>
-      <Container
+      {/* <Container
+        component="main"
+        maxWidth="xs"
+        sx={{ border: "1px solid", borderRadius: "5%" }}
+      > */}
+
+        <Container
         component="main"
         maxWidth="xs"
         sx={{
@@ -35,6 +41,7 @@ export default function SignIn() {
           marginTop: "2rem",
           paddingBottom: "3rem",
           borderRadius: "5%",
+          
         }}
       >
         <CssBaseline />
@@ -87,7 +94,9 @@ export default function SignIn() {
             Sign in with Apple
           </Button>
 
-          <Typography sx={{ mt: "1rem" }}>or</Typography>
+          <Typography sx={{ mt: "1rem" }}>
+            ----------------------------or----------------------------
+          </Typography>
 
           <Box
             component="form"
@@ -147,10 +156,15 @@ export default function SignIn() {
             </Button>
 
             <Grid lg={12} item container>
-              <Grid item lg={12} xs={12} sx={{ marginTop: "3rem" }}>
+              <Grid
+                item
+                lg={12}
+                xs={12}
+                sx={{ marginTop: "3rem", textAlign: "center" }}
+              >
                 <span>Don't have an account?</span>
                 <Link href="/signup" variant="body2">
-                  <span>Sign up</span>
+                  <span> Sign up</span>
                 </Link>
               </Grid>
             </Grid>
