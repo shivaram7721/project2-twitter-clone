@@ -1,0 +1,49 @@
+.mainDiv{
+    /* maxWidth:"25rem" */
+    max-width: 25rem;
+    border: 1px solid;
+    border-radius: 5%;
+    padding: 2rem;
+    background-color: black;
+    color: white;
+    /* min-height: 20rem; */
+    max-height: 40rem;
+}
+
+.firstDiv{
+    /* display:"flex", justifyContent:"space-between" */
+    display: flex;
+    justify-content: space-between;
+    margin-top: 3rem;
+}
+.headThree{
+    /* margin: "0"  */
+    margin: 0;
+}
+.imgPic{
+    border-radius: 30%;
+}
+
+.anch{
+    font-size: large;
+    text-decoration: none;
+    color: rgba(0, 136, 255, 0.639);
+    cursor: pointer;
+}
+
+.trend{
+    /* display:"flex", justifyContent:"space-between" */
+    display: flex;
+    justify-content: space-between;
+}
+
+.thirdHead{
+    /* margin-bottom: 0px; */
+    margin: 0px;
+}
+.para{
+    /* margin: 0px; */
+    margin-top: 0px;
+    margin-bottom: 2rem;
+    
+}

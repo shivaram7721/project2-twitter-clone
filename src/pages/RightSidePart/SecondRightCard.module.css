@@ -1,0 +1,45 @@
+.mainDiv{
+    /* maxWidth:"25rem" */
+    max-width: 25rem;
+    border: 1px solid;
+    border-radius: 5%;
+    padding: 2rem;
+    background-color: black;
+    color: white;
+    /* min-height: 20rem; */
+    max-height: 40rem;
+}
+
+.mainSecondDiv{
+    display: flex;
+    justify-content: space-around;
+    align-items: center;
+    margin-bottom: 2rem;
+}
+
+
+.btn{
+    padding: 0.7rem;
+    border-radius: 2rem;
+    width: 6rem;
+    /* height: 3rem; */
+}
+.imgPic{
+    border-radius: 50%;
+    margin-top: 1rem;
+}
+.userName{
+    margin-bottom: -0.5rem;
+    
+}
+.namePart{
+    display: flex;
+    gap: 1rem;
+    margin-top: -0.5rem;
+}
+.anch{
+    font-size: large;
+    text-decoration: none;
+    color: rgba(0, 136, 255, 0.639);
+    cursor: pointer;
+}
