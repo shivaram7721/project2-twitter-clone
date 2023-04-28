@@ -3,7 +3,6 @@
     align-items: center;
     justify-content: space-around;
     background-color: rgb(29, 161, 242);
-    height: 10vh;
     position: sticky;
     bottom: 0;
 }
