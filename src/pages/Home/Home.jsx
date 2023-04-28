@@ -1,7 +1,7 @@
 // import { getUsers } from "../../utils/localStorage";
-import { Tweets } from "../../components/tweets/tweets";
-import { Footer } from "../../components/footer/footer";
-import { TweetArea } from "../../components/tweetArea/tweetArea";
+// import { Tweets } from "../../components/tweets/tweets";
+// import { Footer } from "../../components/footer/footer";
+// import { TweetArea } from "../../components/tweetArea/tweetArea";
 import { Grid } from "@mui/material";
 
 import homepage from "./Home.module.css"
@@ -22,18 +22,18 @@ export function Home() {
         </Grid>
 
         <Grid md={6} xs={11}>
-          <TweetArea />
-          <Tweets />
+          {/* <TweetArea />
+          <Tweets /> */}
 
         </Grid>
 
-        <Grid md={3.5}>
+        <Grid md={3.5} className={homepage.rightPart}>
           <SearchBar />
           <FirstRightCard />
           <SecondRightCard />
         </Grid>
       </Grid>
-      <Footer />
+      {/* <Footer /> */}
     </div>
   );
 }
