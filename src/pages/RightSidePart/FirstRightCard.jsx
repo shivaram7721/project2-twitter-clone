@@ -1,5 +1,6 @@
 import React, { useState, useEffect } from "react";
 import rightCard from "./FirstRightCard.module.css";
+import SimpleDialogDemo from "./SimpleDialogDemo";
 
 export default function FirstRightCard() {
   return (
@@ -48,13 +49,13 @@ function Trending({ limit }) {
     handleData();
   }, [limit]);
   
-  function handleShowMore() {
-    setTrend((prevTrend) => {
-      const startIndex = prevTrend.length;
-      const remainingUsers = trend.slice(startIndex, startIndex + 3);
-      return [...prevTrend, ...remainingUsers];
-    });
-  }
+  // function handleShowMore() {
+  //   setTrend((prevTrend) => {
+  //     const startIndex = prevTrend.length;
+  //     const remainingTrend = trend.slice(startIndex, startIndex + 3);
+  //     return [...prevTrend, ...remainingTrend];
+  //   });
+  // }
 
   return (
     <>
@@ -62,7 +63,7 @@ function Trending({ limit }) {
         <div key={ele.tweet_counts}>
           <div className={rightCard.trend}>
             <span>Trending in {ele.country_name}</span>
-            <span>...</span>
+            <span><SimpleDialogDemo/></span>
           </div>
 
           <h3 className={rightCard.thirdHead}> #{ele.states_name}</h3>
@@ -71,7 +72,7 @@ function Trending({ limit }) {
       ))}
        {trend.length < limit ? null : (
         // <button onClick={handleShowMore}>Show more</button>
-        <a href="" onClick={handleShowMore} className={rightCard.anch}>
+        <a href="" className={rightCard.anch}>
         Show more
       </a>
       )}
