@@ -1,10 +1,15 @@
 // import { getUsers } from "../../utils/localStorage";
+import { Tweets } from "../../components/tweets/tweets";
+import { Footer } from "../../components/footer/footer";
+
 import homepage from "./Home.module.css"
+
 
 import FirstRightCard from "../RightSidePart/FirstRightCard";
 import SearchBar from "../RightSidePart/SearchBar";
 import SecondRightCard from "../RightSidePart/SecondRightCard";
 import SimpleDialogDemo from "../RightSidePart/SimpleDialogDemo";
+
 
 export function Home() {
   return (
