@@ -20,7 +20,7 @@ function Trending({ limit }) {
 
   async function handleData() {
     try {
-      const res = await fetch("/rightUser.json");
+      const res = await fetch("/users.json");
       const data = await res.json();
       const usersWithFollowState = data.slice(0, limit).map(user => ({
         ...user,
