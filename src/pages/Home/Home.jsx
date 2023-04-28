@@ -16,7 +16,7 @@ export function Home() {
   return (
     <div>
       <Grid container>
-        <Grid item md={2.5} xs={1}>
+        <Grid item md={2.5} xs={1} className={homepage.rightPart}>
           <Sidebar />
         </Grid>
 
