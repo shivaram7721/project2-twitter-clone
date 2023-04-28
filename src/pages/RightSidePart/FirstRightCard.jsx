@@ -1,5 +1,6 @@
 import React, { useState, useEffect } from "react";
 import rightCard from "./FirstRightCard.module.css";
+import SimpleDialogDemo from "./SimpleDialogDemo";
 
 export default function FirstRightCard() {
   return (
@@ -62,7 +63,7 @@ function Trending({ limit }) {
         <div key={ele.tweet_counts}>
           <div className={rightCard.trend}>
             <span>Trending in {ele.country_name}</span>
-            <span>...</span>
+            <span><SimpleDialogDemo/></span>
           </div>
 
           <h3 className={rightCard.thirdHead}> #{ele.states_name}</h3>

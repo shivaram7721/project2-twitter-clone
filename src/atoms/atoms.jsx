@@ -1,4 +1,5 @@
 import { atom } from "recoil";
+// import SimpleDialogDemo from "../pages/RightSidePart/SimpleDialogDemo";
 
 export const nameState = atom({
   key: "nameState",
@@ -60,3 +61,13 @@ export const matchState = atom({
     key: "matchState",
     default: ""
 })
+
+export const popupState = atom({
+  key: "popupState",
+  default: false
+})
+
+// export const simpleDialogState = atom({
+//   key: "simpleDialogState",
+//   default:<SimpleDialogDemo/>
+// })
