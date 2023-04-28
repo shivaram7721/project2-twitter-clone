@@ -60,3 +60,8 @@ export const matchState = atom({
     key: "matchState",
     default: ""
 })
+
+export const tweetsData = atom({
+  key: "tweetsData",
+  default:[]
+})

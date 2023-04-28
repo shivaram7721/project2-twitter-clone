@@ -33,9 +33,21 @@
     color: white;
 }
 
+.tweetContent {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  text-align: justify;
+}
+
+.content {
+  width: 38vw;
+}
+
 .profileHead {
     display: flex;
     color: white;
+    /* justify-content: space-between; */
     /* align-items: flex-start; */
 }
 
@@ -62,7 +74,7 @@
 
 .dots {
     color: white;
-    margin-left: 6.5rem;
+    /* margin-left: 6.5rem; */
 }
 
 .iconsDiv {
@@ -96,8 +108,9 @@
 .tweetIcons {
     display: flex;
     align-items: center;
-    justify-content: center;
-    gap: 1rem;
+    justify-content: space-around;
+    /* gap: 1rem; */
+    flex: 2;
     /* flex-direction: column; */
 }
 
@@ -126,109 +139,3 @@
 
 
 
-/* For mobile devices with a maximum width of 768px */
-@media only screen and (max-width: 768px) {
-    .header {
-      display: flex;
-      flex-direction: column;
-      justify-content: center;
-      align-items: center;
-      padding: 20px;
-      text-align: center;
-    }
-    .logo {
-      width: 80%;
-      margin-bottom: 20px;
-    }
-    .nav {
-      display: flex;
-      flex-direction: column;
-      justify-content: center;
-      align-items: center;
-      padding: 20px;
-    }
-    .nav a {
-      margin-bottom: 10px;
-    }
-    .main {
-      padding: 20px;
-    }
-    .sidebar {
-      display: none;
-    }
-    .footer {
-      padding: 20px;
-      text-align: center;
-    }
-  }
-  
-  /* For tablets with a maximum width of 1024px */
-  @media only screen and (min-width: 769px) and (max-width: 1024px) {
-    .header {
-      display: flex;
-      justify-content: space-between;
-      align-items: center;
-      padding: 20px;
-    }
-    .logo {
-      width: 50%;
-    }
-    .nav {
-      display: flex;
-      justify-content: space-between;
-      align-items: center;
-      padding: 20px;
-    }
-    .nav a {
-      margin-right: 20px;
-    }
-    .main {
-      width: 70%;
-      padding: 20px;
-    }
-    .sidebar {
-      width: 30%;
-      padding: 20px;
-      display: block;
-    }
-    .footer {
-      padding: 20px;
-      text-align: center;
-    }
-  }
-  
-  /* For desktop devices with a minimum width of 1025px
-  @media only screen and (min-width: 1025px) {
-    .header {
-      display: flex;
-      justify-content: space-between;
-      align-items: center;
-      padding: 20px;
-    }
-    .logo {
-      width: 20%;
-    }
-    .nav {
-      display: flex;
-      justify-content: space-between;
-      align-items: center;
-      padding: 20px;
-    }
-    .nav a {
-      margin-right: 20px;
-    }
-    .main {
-      width: 70%;
-      padding: 20px;
-    }
-    .sidebar {
-      width: 20%;
-      padding: 20px;
-      display: block;
-    }
-    .footer {
-      padding: 20px;
-      text-align: center;
-    }
-  }
-   */
