@@ -1,11 +1,11 @@
-import React, { useState, useEffect } from "react";
+import { useState, useEffect } from "react";
 import rightCard from "./FirstRightCard.module.css";
 import SimpleDialogDemo from "./SimpleDialogDemo";
 
 export default function FirstRightCard() {
   return (
     <div className={rightCard.mainDiv}>
-      <h1>What's happening</h1>
+      <h1>What &apos;s happening</h1>
 
       <div className={rightCard.firstDiv}>
         <div>
