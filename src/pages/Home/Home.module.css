@@ -1,0 +1,14 @@
+@media only screen and (min-width: 1024px) {
+    /* CSS rules for laptops go here */
+    .rightPart{
+        margin-left: 70%;
+    }
+  }
+  
+  @media only screen and (max-width: 1023px) {
+    /* CSS rules for mobile devices go here */
+    .rightPart {
+      display: none;
+    }
+  }
+  
