@@ -3,15 +3,16 @@
 .gridMainContainer {
     height: 95vh;
     /* background-color: rgb(26, 26, 49); */
-    background-color: rgb(162, 206, 206);
+    /* background-color: rgb(162, 206, 206); */
 }
 
 .tweetsContainer {
     /* background-color: rgb(26, 26, 49); */
     /* background-color: pink; */
+    border: 1px solid grey;
     background-color: black;
-    margin: -1rem;
-    padding-left: 0;
+    padding: 1rem;
+
 }
 
 .profileImg {

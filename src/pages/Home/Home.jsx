@@ -6,6 +6,8 @@
 import { Grid } from "@mui/material";
 import { Tweets } from "../../components/tweets/tweets";
 import { Footer } from "../../components/footer/footer";
+import { TweetArea } from "../../components/tweetArea/tweetArea";
+import { Grid } from "@mui/material";
 
 
 import homepage from "./Home.module.css"
