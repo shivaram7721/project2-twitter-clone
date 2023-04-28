@@ -1,14 +1,20 @@
 // import { getUsers } from "../../utils/localStorage";
+
 // import { Tweets } from "../../components/tweets/tweets";
 // import { Footer } from "../../components/footer/footer";
 // import { TweetArea } from "../../components/tweetArea/tweetArea";
 import { Grid } from "@mui/material";
+import { Tweets } from "../../components/tweets/tweets";
+import { Footer } from "../../components/footer/footer";
+
 
 import homepage from "./Home.module.css"
+
 
 import FirstRightCard from "../RightSidePart/FirstRightCard";
 import SearchBar from "../RightSidePart/SearchBar";
 import SecondRightCard from "../RightSidePart/SecondRightCard";
+
 
 
 export function Home() {

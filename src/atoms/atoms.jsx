@@ -62,6 +62,12 @@ export const matchState = atom({
     default: ""
 })
 
+
+export const tweetsData = atom({
+  key: "tweetsData",
+  default:[]
+})
+
 export const popupState = atom({
   key: "popupState",
   default: false
@@ -71,3 +77,4 @@ export const popupState = atom({
 //   key: "simpleDialogState",
 //   default:<SimpleDialogDemo/>
 // })
+
