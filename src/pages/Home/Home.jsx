@@ -13,12 +13,10 @@ export function Home() {
 
                 </Grid>
 
-
                 <Grid md={6} xs={11}>
                     <TweetArea />
                     <Tweets />
                 </Grid>
-
 
                 <Grid md={3}>
 
