@@ -24,6 +24,7 @@ export function TweetArea() {
                   placeholder="What's happening?"
                   className={styles.tweet}
                 />
+                {/* <textarea cols="68" rows="5" style={{backgroundColor:"black"}}></textarea> */}
               </div>
             </div>
 

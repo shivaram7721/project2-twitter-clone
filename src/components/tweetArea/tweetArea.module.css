@@ -24,6 +24,8 @@
     background-color: black;
     border: none;
     font-size: 1.3rem;
+    width: 32rem;
+    height: 4rem;
 }
 
 .tweetIcons {

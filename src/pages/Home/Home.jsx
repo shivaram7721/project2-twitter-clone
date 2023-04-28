@@ -21,17 +21,17 @@ export function Home() {
   return (
     <div>
       <Grid container >
-        <Grid md={2.5} xs={1}>
+        <Grid item md={2.5} xs={1}>
 
         </Grid>
 
-        <Grid md={6} xs={11} >
+        <Grid item md={6} xs={11} >
           <TweetArea />
           <Tweets />
 
         </Grid>
 
-        <Grid md={3.5} className={homepage.rightPart}>
+        <Grid item md={3.5} className={homepage.rightPart}>
           <SearchBar />
           <FirstRightCard />
           <SecondRightCard />
