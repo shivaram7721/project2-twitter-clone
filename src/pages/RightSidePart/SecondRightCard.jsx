@@ -22,7 +22,11 @@ function Trending({ limit }) {
     try {
       const res = await fetch("/users.json");
       const data = await res.json();
-      setUsers(data.slice(0, limit));
+      const usersWithFollowState = data.slice(0, limit).map(user => ({
+        ...user,
+        isFollowed: false
+      }));
+      setUsers(usersWithFollowState);
     } catch (error) {
       console.log(error);
       setIsError(error.message);
@@ -33,17 +37,21 @@ function Trending({ limit }) {
     handleData();
   }, [limit]);
 
-  function handleShowMore() {
+  const handleFollow = (user) => {
     setUsers((prevUsers) => {
-      const startIndex = prevUsers.length;
-      const remainingUsers = users.slice(startIndex, startIndex + 3);
-      return [...prevUsers, ...remainingUsers];
+      const updatedUsers = prevUsers.map((prevUser) => {
+        if (prevUser.id === user.id) {
+          return {
+            ...prevUser,
+            isFollowed: !prevUser.isFollowed,
+          };
+        }
+        return prevUser;
+      });
+      return updatedUsers;
     });
-  }
+  };
 
-//   const images = new Array(100).fill(0).map((x, index)=>{
-//     return `https://randomuser.me/api/portraits/men/${index}.jpg`
-//   })
   return (
     <div>
       {users.map((user) => (
@@ -58,7 +66,7 @@ function Trending({ limit }) {
 
           <div className={secondRightCard.userName}>
             <p>
-              {user.first_name} {user.last_name} 
+              {user.first_name} {user.last_name}
             </p>
             <div className={secondRightCard.namePart}>
               <span>@{user.user_name}</span>
@@ -67,16 +75,20 @@ function Trending({ limit }) {
           </div>
 
           <div>
-            <button className={secondRightCard.btn}>Follow</button>
+            <button
+              onClick={() => handleFollow(user)}
+              className={secondRightCard.btn}
+            >
+              {user.isFollowed ? "Followed" : "Follow"}
+            </button>
           </div>
         </div>
       ))}
 
       {users.length < limit ? null : (
-        // <button onClick={handleShowMore}>Show more</button>
-        <a href="" onClick={handleShowMore} className={secondRightCard.anch}>
-        Show more
-      </a>
+        <a href="" className={secondRightCard.anch}>
+          Show more
+        </a>
       )}
     </div>
   );

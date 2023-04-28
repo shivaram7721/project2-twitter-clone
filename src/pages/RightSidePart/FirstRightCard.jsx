@@ -48,13 +48,13 @@ function Trending({ limit }) {
     handleData();
   }, [limit]);
   
-  function handleShowMore() {
-    setTrend((prevTrend) => {
-      const startIndex = prevTrend.length;
-      const remainingUsers = trend.slice(startIndex, startIndex + 3);
-      return [...prevTrend, ...remainingUsers];
-    });
-  }
+  // function handleShowMore() {
+  //   setTrend((prevTrend) => {
+  //     const startIndex = prevTrend.length;
+  //     const remainingTrend = trend.slice(startIndex, startIndex + 3);
+  //     return [...prevTrend, ...remainingTrend];
+  //   });
+  // }
 
   return (
     <>
@@ -71,7 +71,7 @@ function Trending({ limit }) {
       ))}
        {trend.length < limit ? null : (
         // <button onClick={handleShowMore}>Show more</button>
-        <a href="" onClick={handleShowMore} className={rightCard.anch}>
+        <a href="" className={rightCard.anch}>
         Show more
       </a>
       )}
