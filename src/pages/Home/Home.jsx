@@ -4,6 +4,7 @@ import homepage from "./Home.module.css"
 import FirstRightCard from "../RightSidePart/FirstRightCard";
 import SearchBar from "../RightSidePart/SearchBar";
 import SecondRightCard from "../RightSidePart/SecondRightCard";
+import SimpleDialogDemo from "../RightSidePart/SimpleDialogDemo";
 
 export function Home() {
   return (
@@ -16,6 +17,7 @@ export function Home() {
           <FirstRightCard />
           <SecondRightCard />
         </div>
+        {/* <SimpleDialogDemo/> */}
       </div>
     </div>
   );
