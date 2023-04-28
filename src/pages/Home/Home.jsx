@@ -1,6 +1,12 @@
 // import { getUsers } from "../../utils/localStorage";
+
+// import { Tweets } from "../../components/tweets/tweets";
+// import { Footer } from "../../components/footer/footer";
+// import { TweetArea } from "../../components/tweetArea/tweetArea";
+import { Grid } from "@mui/material";
 import { Tweets } from "../../components/tweets/tweets";
 import { Footer } from "../../components/footer/footer";
+
 
 import homepage from "./Home.module.css"
 
@@ -8,22 +14,32 @@ import homepage from "./Home.module.css"
 import FirstRightCard from "../RightSidePart/FirstRightCard";
 import SearchBar from "../RightSidePart/SearchBar";
 import SecondRightCard from "../RightSidePart/SecondRightCard";
-import SimpleDialogDemo from "../RightSidePart/SimpleDialogDemo";
+
 
 
 export function Home() {
+
+
   return (
     <div>
-      {/* <h1>Home page</h1> */}
+      <Grid container>
+        <Grid md={2.5} xs={1}>
 
-      <div className={homepage.rightPart}>
-        <div > 
+        </Grid>
+
+        <Grid md={6} xs={11}>
+          {/* <TweetArea />
+          <Tweets /> */}
+
+        </Grid>
+
+        <Grid md={3.5} className={homepage.rightPart}>
           <SearchBar />
           <FirstRightCard />
           <SecondRightCard />
-        </div>
-        {/* <SimpleDialogDemo/> */}
-      </div>
+        </Grid>
+      </Grid>
+      {/* <Footer /> */}
     </div>
   );
 }
