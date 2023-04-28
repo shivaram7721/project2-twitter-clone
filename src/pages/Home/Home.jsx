@@ -6,7 +6,6 @@ import { Grid } from "@mui/material";
 
 export function Home() {
 
-        
     return (
         <div>
             <Grid container>
@@ -14,10 +13,12 @@ export function Home() {
 
                 </Grid>
 
+
                 <Grid md={6} xs={11}>
                     <TweetArea />
                     <Tweets />
                 </Grid>
+
 
                 <Grid md={3}>
 
