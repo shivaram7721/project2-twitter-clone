@@ -1,5 +1,9 @@
 .tweetAreaContainer {
     background-color: black;
+    border-radius: 1rem;
+    border:1px solid white;
+    margin-right:1rem;
+    margin-bottom: 0.5rem;
 }
 
 .profileImg {

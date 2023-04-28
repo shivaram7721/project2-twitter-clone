@@ -20,12 +20,12 @@ export function Home() {
 
   return (
     <div>
-      <Grid container>
+      <Grid container >
         <Grid md={2.5} xs={1}>
 
         </Grid>
 
-        <Grid md={6} xs={11}>
+        <Grid md={6} xs={11} >
           <TweetArea />
           <Tweets />
 
