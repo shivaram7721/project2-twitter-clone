@@ -49,32 +49,29 @@ export const passErrorState = atom({
 export const registeredState = atom({
   key: "registeredState",
   default: false,
-  
 });
 
 export const createState = atom({
-    key: "createState",
-    default: true
-})
+  key: "createState",
+  default: true,
+});
 
 export const matchState = atom({
-    key: "matchState",
-    default: ""
-})
-
+  key: "matchState",
+  default: "",
+});
 
 export const tweetsData = atom({
   key: "tweetsData",
-  default:[]
-})
+  default: [],
+});
 
 export const popupState = atom({
   key: "popupState",
-  default: false
-})
+  default: false,
+});
 
 // export const simpleDialogState = atom({
 //   key: "simpleDialogState",
 //   default:<SimpleDialogDemo/>
 // })
-

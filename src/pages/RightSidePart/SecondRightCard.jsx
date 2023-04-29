@@ -16,20 +16,19 @@ export default function SecondRightCard() {
 
 function Trending({ limit }) {
   const [users, setUsers] = useState([]);
-  const [isError, setIsError] = useState("");
 
   async function handleData() {
     try {
       const res = await fetch("/users.json");
       const data = await res.json();
-      const usersWithFollowState = data.slice(0, limit).map(user => ({
+      const usersWithFollowState = data.slice(0, limit).map((user) => ({
         ...user,
-        isFollowed: false
+        isFollowed: false,
       }));
       setUsers(usersWithFollowState);
     } catch (error) {
       console.log(error);
-      setIsError(error.message);
+      alert(error.message);
     }
   }
 

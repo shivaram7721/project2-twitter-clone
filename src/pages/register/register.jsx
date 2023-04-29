@@ -1,11 +1,11 @@
 // import { useState } from "react";
 import { getUsers } from "../../utils/localStorage";
 import styles from "./register.module.css";
-import {BsTwitter} from 'react-icons/bs'
+import { BsTwitter } from "react-icons/bs";
 import { useRecoilState, useRecoilValue } from "recoil";
 import { Create } from "./create";
 import { useNavigate } from "react-router-dom";
-import { 
+import {
   nameState,
   emailState,
   dateState,
@@ -15,8 +15,9 @@ import {
   emailErrorState,
   mobileErrorState,
   passErrorState,
-  registeredState, 
-  createState} from "../../atoms/atoms";
+  registeredState,
+  createState,
+} from "../../atoms/atoms";
 
 export function Register() {
   const create = useRecoilValue(createState);
@@ -32,7 +33,6 @@ export function Register() {
   const [passError, setPassError] = useRecoilState(passErrorState);
 
   const navigate = useNavigate();
-
 
   function validateUserName() {
     const regex = /^[a-zA-Z0-9_]{5,16}$/;
@@ -129,9 +129,8 @@ export function Register() {
           isLogin: false,
         });
         localStorage.setItem("users", JSON.stringify(users));
-        navigate('/login')
+        navigate("/login");
       }
-      
     }
     setName("");
     setEmail("");
@@ -142,74 +141,69 @@ export function Register() {
 
   return (
     <div className={styles.Regcontainer}>
+      {/* <Create /> */}
 
+      {create ? (
+        <Create />
+      ) : (
+        <div>
+          <span className={styles.errReg}>{registered}</span>
+          <div className={styles.formContainer}>
+            <form className={styles.formReg} onSubmit={handleSubmit}>
+              <BsTwitter style={{ color: "white" }} />
+              <h2 className={styles.headReg}>Create your account</h2>
+              <input
+                type="text"
+                onChange={(e) => setName(e.target.value)}
+                value={name}
+                placeholder="name"
+                className={styles.inputReg}
+              />
+              {<span className={styles.errMsg}>{nameError}</span>}
 
-    {/* <Create /> */}
+              <input
+                type="email"
+                onChange={(e) => setEmail(e.target.value)}
+                value={email}
+                placeholder="email"
+                className={styles.inputReg}
+              />
+              {<span className={styles.errMsg}>{emailError}</span>}
 
-    {
-        create ? <Create /> : <div>
+              <input
+                type="number"
+                onChange={(e) => setMobile(e.target.value)}
+                value={mobile}
+                placeholder="Phone"
+                className={styles.inputReg}
+              />
+              {<span className={styles.errMsg}>{mobileError}</span>}
 
-            <span className={styles.errReg}>{registered}</span>
-      <div className={styles.formContainer}>
-        <form className={styles.formReg} onSubmit={handleSubmit}>
-          <BsTwitter style={{color:"white"}}/>
-          <h2 className={styles.headReg}>Create your account</h2>
-          <input
-            type="text"
-            onChange={(e) => setName(e.target.value)}
-            value={name}
-            placeholder="name"
-            className={styles.inputReg}
-          />
-          {<span className={styles.errMsg}>{nameError}</span>}
+              <input
+                type="date"
+                onChange={(e) => setDate(e.target.value)}
+                value={date}
+                placeholder="DOB"
+                className={styles.inputReg}
+              />
+              {/* {<span className={styles.errMsg}>{nameError}</span>} */}
 
-          <input
-            type="email"
-            onChange={(e) => setEmail(e.target.value)}
-            value={email}
-            placeholder="email"
-            className={styles.inputReg}
-          />
-          {<span className={styles.errMsg}>{emailError}</span>}
+              <input
+                type="password"
+                onChange={(e) => setPassword(e.target.value)}
+                value={password}
+                placeholder="password"
+                className={styles.inputReg}
+              />
+              {<span className={styles.errMsg}>{passError}</span>}
 
-          <input
-            type="number"
-            onChange={(e) => setMobile(e.target.value)}
-            value={mobile}
-            placeholder="Phone"
-            className={styles.inputReg}
-          />
-          {<span className={styles.errMsg}>{mobileError}</span>}
-
-          <input
-            type="date"
-            onChange={(e) => setDate(e.target.value)}
-            value={date}
-            placeholder="DOB"
-            className={styles.inputReg}
-          />
-          {/* {<span className={styles.errMsg}>{nameError}</span>} */}
-
-          <input
-            type="password"
-            onChange={(e) => setPassword(e.target.value)}
-            value={password}
-            placeholder="password"
-            className={styles.inputReg}
-          />
-          {<span className={styles.errMsg}>{passError}</span>}
-
-          <button className={styles.btnReg} type="submit">
-            Create
-          </button>
-        </form>
-      </div>
+              <button className={styles.btnReg} type="submit">
+                Create
+              </button>
+            </form>
+          </div>
         </div>
-    }
-
-
-
-      
+      )}
     </div>
   );
 }

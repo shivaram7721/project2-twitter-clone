@@ -1,11 +1,11 @@
 export function getUsers() {
-    const users = localStorage.getItem('users');
-    try {
-        if(users) {
-            return JSON.parse(users)
-        }
-    } catch (error) {
-        return []
+  const users = localStorage.getItem("users");
+  try {
+    if (users) {
+      return JSON.parse(users);
     }
-    return []
+  } catch (error) {
+    return [];
+  }
+  return [];
 }

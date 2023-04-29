@@ -49,10 +49,7 @@ function SimpleDialog(props) {
       >
         {optionsPopup.map((popOpt, i) => (
           <ListItem key={i} disableGutters>
-            <ListItemButton
-              onClick={() => handleListItemClick(popOpt)}
-              key={popOpt}
-            >
+            <ListItemButton onClick={() => handleClose(popOpt)} key={popOpt}>
               <ListItemAvatar>
                 <Avatar sx={{ bgcolor: blue[100], color: blue[600] }}>
                   ☹️

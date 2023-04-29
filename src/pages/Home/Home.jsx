@@ -32,7 +32,6 @@ export function Home() {
         </Grid>
       </Grid>
       <Footer />
-      
     </div>
   );
 }

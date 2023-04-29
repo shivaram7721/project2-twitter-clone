@@ -23,16 +23,12 @@ export default function FirstRightCard() {
         </div>
       </div>
       <Trending limit={3} />
-      {/* <a href="" className={rightCard.anch}>
-        Show more
-      </a> */}
     </div>
   );
 }
 
 function Trending({ limit }) {
   const [trend, setTrend] = useState([]);
-  const [isError, setIsError] = useState("");
 
   async function handleData() {
     try {
@@ -41,14 +37,14 @@ function Trending({ limit }) {
       setTrend(data.slice(0, limit));
     } catch (error) {
       console.log(error);
-      setIsError(error.message);
+      alert(error.message);
     }
   }
 
   useEffect(() => {
     handleData();
   }, [limit]);
-  
+
   // function handleShowMore() {
   //   setTrend((prevTrend) => {
   //     const startIndex = prevTrend.length;
@@ -63,18 +59,20 @@ function Trending({ limit }) {
         <div key={ele.tweet_counts}>
           <div className={rightCard.trend}>
             <span>Trending in {ele.country_name}</span>
-            <span><SimpleDialogDemo/></span>
+            <span>
+              <SimpleDialogDemo />
+            </span>
           </div>
 
           <h3 className={rightCard.thirdHead}> #{ele.states_name}</h3>
           <p className={rightCard.para}>{ele.tweet_counts}K Tweets</p>
         </div>
       ))}
-       {trend.length < limit ? null : (
+      {trend.length < limit ? null : (
         // <button onClick={handleShowMore}>Show more</button>
         <a href="" className={rightCard.anch}>
-        Show more
-      </a>
+          Show more
+        </a>
       )}
     </>
   );
