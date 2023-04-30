@@ -9,6 +9,7 @@ import {
   import { BsEmojiSmile } from "react-icons/bs";
   import { GrLocation } from "react-icons/gr";
   import styles from "./tweetArea.module.css"
+  import Tooltip from '@mui/material/Tooltip';
 
 export function TweetArea() {
 
@@ -30,24 +31,36 @@ export function TweetArea() {
 
             <div className={styles.tweetIcons}>
               <div className={styles.icons}>
+                <Tooltip title="Media">
                 <p>
                   <CiImageOn />
                 </p>
+                </Tooltip>
+                <Tooltip title="Gif">
                 <p>
                   <AiOutlineFileGif />
                 </p>
+                </Tooltip>
+                <Tooltip title="Poll">
                 <p>
                   <BiPoll />
                 </p>
+                </Tooltip>
+                <Tooltip title="Emoji">
                 <p>
                   <BsEmojiSmile />
                 </p>
+                </Tooltip>
+                <Tooltip title="Schedule">
                 <p>
                   <AiOutlineSchedule />
                 </p>
+                </Tooltip>
+                <Tooltip title="Location">
                 <p>
                   <GrLocation />
                 </p>
+                </Tooltip>
               </div>
 
               <div className={styles.tweetBtnDiv}>

@@ -12,3 +12,12 @@
     }
   }
   
+.rightSideBar {
+  position: sticky;
+  bottom: 0;
+}
+
+/* .sideCards {
+  position: sticky;
+  top: 0;
+} */

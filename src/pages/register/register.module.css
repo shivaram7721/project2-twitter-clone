@@ -59,3 +59,71 @@
     color: red;
     font-size: .8rem;
 }
+
+
+@media (max-width: 600px) {
+    .Regcontainer {
+      /* padding: 10px; */
+      /* width: 60vw; */
+      /* margin: 5rem */
+
+    }
+    
+    .formReg {
+      width: 60vw;
+      height: 80vh;
+      /* margin: 10px 0; */
+    }
+    
+    .inputReg {
+      width: 100%;
+      padding: 10px;
+      /* margin: 10px 0; */
+      border-radius: 5px;
+      border: none;
+      box-shadow: 0px 2px 5px rgba(0, 0, 0, 0.3);
+    }
+    
+    .headReg {
+      font-size: 20px;
+      /* margin: 20px 0; */
+    }
+    
+    .errMsg {
+      font-size: 14px;
+      color: red;
+      /* margin: 5px 0; */
+    }
+    
+    .formContainer {
+      display: flex;
+      flex-direction: column;
+      align-items: center;
+      justify-content: center;
+    }
+    
+    .btnReg {
+      width: 40vw;
+      padding: 10px;
+      margin: 10px 0;
+      border-radius: 5px;
+      border: none;
+      background-color: #f1f2f3;
+      color: rgb(12, 12, 12);
+      font-size: 16px;
+      cursor: pointer;
+      box-shadow: 0px 2px 5px rgba(0, 0, 0, 0.3);
+    }
+    
+    .buttonReg:hover {
+      background-color: #0c6eaa;
+    }
+    
+    .errReg {
+      font-size: 14px;
+      color: red;
+      /* margin: 5px 0; */
+      text-align: center;
+    }
+  }
+  

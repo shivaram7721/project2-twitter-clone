@@ -4,7 +4,7 @@ import secondRightCard from "./SecondRightCard.module.css";
 export default function SecondRightCard() {
   return (
     <div className={secondRightCard.mainDiv}>
-      <h1>Who to follow</h1>
+      <h2 className={secondRightCard.head2}>Who to follow</h2>
 
       <Trending limit={3} />
       {/* <a href="" className={secondRightCard.anch}>
@@ -56,22 +56,21 @@ function Trending({ limit }) {
     <div>
       {users.map((user) => (
         <div className={secondRightCard.mainSecondDiv} key={user.id}>
-          <div>
+          <div className={secondRightCard.imgUserDiv}>
             <img
               className={secondRightCard.imgPic}
               src="https://picsum.photos/60/60?q=12"
               alt=""
             />
-          </div>
-
-          <div className={secondRightCard.userName}>
-            <p>
+            <div className={secondRightCard.userName}>
+            <span className={secondRightCard.userName}>
               {user.first_name} {user.last_name}
-            </p>
+            </span>
             <div className={secondRightCard.namePart}>
-              <span>@{user.user_name}</span>
-              <span>Follows you</span>
+              <span className={secondRightCard.namePartUser}>@{user.user_name}</span>
+              {/* <span>Follows you</span> */}
             </div>
+          </div>
           </div>
 
           <div>
@@ -86,9 +85,9 @@ function Trending({ limit }) {
       ))}
 
       {users.length < limit ? null : (
-        <a href="" className={secondRightCard.anch}>
+        <p className={secondRightCard.anch}>
           Show more
-        </a>
+        </p>
       )}
     </div>
   );

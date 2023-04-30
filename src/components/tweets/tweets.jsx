@@ -5,7 +5,7 @@ import {
   BiMessageRounded
 } from "react-icons/bi";
 import { FaRetweet } from "react-icons/fa";
-import { AiOutlineHeart } from "react-icons/ai";
+import { AiFillHeart } from "react-icons/ai";
 import { MdOutlinePoll } from "react-icons/md";
 import { CiExport } from "react-icons/ci";
 import { tweetsData } from "../../atoms/atoms";
@@ -21,10 +21,25 @@ export function Tweets() {
       .then((data) => setTweets(data));
   }, []);
 
+  function handleLike(id) {
+    setTweets((prevTweets) =>
+      prevTweets.map((tweet) =>
+        tweet.id === id
+          ? {
+              ...tweet,
+              likeCount: tweet.liked ? tweet.likeCount - 1 : tweet.likeCount + 1,
+              liked: !tweet.liked,
+            }
+          : tweet
+      )
+    );
+  }
+  
+
 
   return (
-    <div>
-        {tweets.map((tweet) => (
+    <div className={styles.tweetsDivMain}>
+        {tweets.map((tweet, id) => (
           <Grid className={styles.tweetsContainer} key={tweet.id} >
             <div className={styles.tweetHead}>
               <img className={styles.profileImg} src={tweet.image} />
@@ -33,24 +48,24 @@ export function Tweets() {
                 <div className={styles.profileHead}>
                   <span className={styles.head4}>{tweet.tweetedBy.name}</span>
                   <span className={styles.mention}>@ChennaiIPL .2h</span>
-                  <div>
+                  {/* <div> */}
                     <span>
                       <BiDotsHorizontalRounded className={styles.dots} />
                     </span>
-                  </div>
+                  {/* </div> */}
                 </div>
 
                 <div className={styles.tweetContent}>
                   <span className={styles.content}>{tweet.content}</span>
-                  <p>
+                  {/* <p>
                     <BiDotsHorizontalRounded className={styles.dots} />
-                  </p>
+                  </p> */}
                 </div>
               </div>
               <div className={styles.dotsDiv}>
-                <p>
+                {/* <p>
                   <BiDotsHorizontalRounded className={styles.dots} />
-                </p>
+                </p> */}
               </div>
             </div>
 
@@ -67,7 +82,7 @@ export function Tweets() {
                   {tweet.reTweetsCount}
                 </p>
                 <p className={styles.count}>
-                  <AiOutlineHeart />
+                  <AiFillHeart onClick={() => handleLike(tweet.id)} className={tweet.liked ? styles.liked : ""} />
                   {tweet.likeCount}
                 </p>
                 <p className={styles.count}>

@@ -5,13 +5,13 @@ import SimpleDialogDemo from "./SimpleDialogDemo";
 export default function FirstRightCard() {
   return (
     <div className={rightCard.mainDiv}>
-      <h1>What &apos;s happening</h1>
+      <h3 className={rightCard.head2}>What &apos;s happening</h3>
 
       <div className={rightCard.firstDiv}>
         <div>
-          <span>NBA - 42 minutes ago</span>
+          <span className={rightCard.textGrey}>NBA - 42 minutes ago</span>
           <br />
-          <h3 className={rightCard.headThree}>Warriors at Kings</h3>
+          <p className={rightCard.headThree}>Warriors at Kings</p>
         </div>
 
         <div>
@@ -62,19 +62,19 @@ function Trending({ limit }) {
       {trend.map((ele, i) => (
         <div key={ele.tweet_counts}>
           <div className={rightCard.trend}>
-            <span>Trending in {ele.country_name}</span>
+            <span className={rightCard.textGrey}>Trending in {ele.country_name}</span>
             <span><SimpleDialogDemo/></span>
           </div>
 
-          <h3 className={rightCard.thirdHead}> #{ele.states_name}</h3>
-          <p className={rightCard.para}>{ele.tweet_counts}K Tweets</p>
+          <p className={rightCard.thirdHead}> #{ele.states_name}</p>
+          <span className={rightCard.textGrey}>{ele.tweet_counts}K Tweets</span>
         </div>
       ))}
        {trend.length < limit ? null : (
         // <button onClick={handleShowMore}>Show more</button>
-        <a href="" className={rightCard.anch}>
+        <span className={rightCard.anch}>
         Show more
-      </a>
+      </span>
       )}
     </>
   );

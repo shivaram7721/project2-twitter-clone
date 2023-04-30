@@ -11,9 +11,10 @@ import {
   passwordState,
   emailErrorState,
   passErrorState,
-  matchState 
+  matchState,
+  logInOut 
   } from "../../atoms/atoms";
-import { useRecoilState } from "recoil";
+import { useRecoilState, useRecoilValue } from "recoil";
 // import TextField from '@mui/material/TextField';
 
 export function Login() {
@@ -25,6 +26,7 @@ export function Login() {
   const [emailError, setEmailError] = useRecoilState(emailErrorState)
   const [passError, setPassError] = useRecoilState(passErrorState)
   const [match, setMatch] = useRecoilState(matchState)
+  // const [log, setLog] = useSetRecoilState(logInOut);
 
   const navigate = useNavigate();
 
@@ -82,6 +84,8 @@ export function Login() {
             return user
         })
         localStorage.setItem('users', JSON.stringify(user))
+        localStorage.setItem('isLogin', JSON.stringify(true))
+        // setLog(user)
         navigate('/')
     } else {
         setMatch('Please Register')
@@ -95,8 +99,9 @@ export function Login() {
   return (
     <div className={styles.Logcontainer}>
         
-        {<span className={styles.errMsg}>{match}</span>}
+        
       <div className={styles.formContainer}>
+      {<span className={styles.errMsg}>{match}</span>}
       <form className={styles.formLog} onSubmit={handleSubmit}>
       <BsTwitter style={{color:"white"}}/>
 
