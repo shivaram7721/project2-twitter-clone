@@ -4,18 +4,18 @@
     height: 95vh;
     /* background-color: rgb(26, 26, 49); */
     /* background-color: rgb(162, 206, 206); */
-   
+   /* width: 47vw; */
 }
 
 .tweetsContainer {
     /* background-color: rgb(26, 26, 49); */
     /* background-color: pink; */
-    border: 1px solid grey;
+    border: 1px solid rgb(110, 108, 108, .5);
     background-color: black;
     padding: 1rem;
-    border-radius: 1rem;
-    margin-right:1rem;
-    margin-bottom: 0.5rem;
+    /* border-radius: 1rem; */
+    /* margin-right:1rem; */
+    /* margin-bottom: 0.5rem; */
 
 }
 
@@ -39,19 +39,23 @@
 }
 
 .tweetContent {
-  display: flex;
+  /* display: flex; */
   align-items: center;
-  justify-content: center;
+  /* justify-content: center; */
   text-align: justify;
+  width: 36vw;
 }
 
 .content {
   width: 38vw;
+  font-family: Georgia, 'Times New Roman', Times, serif;
+  font-size: 1rem;
 }
 
 .profileHead {
     display: flex;
     color: white;
+    width: 70vw;
     /* justify-content: space-between; */
     /* align-items: flex-start; */
 }
@@ -69,6 +73,7 @@
 
 .postContainer {
     /* border: 1px solid grey; */
+    width: 70vw;
 }
 
 .postImg {
@@ -89,8 +94,9 @@
     color: white;
     /* gap: rem; */
     width: 40vw;
+    padding-left: 3rem;
     border-radius: 10px;
-    margin: 1rem 1rem 1rem 3.5rem;
+    /* margin: 1rem 1rem 1rem 3.5rem; */
 }
 
 .count {
@@ -139,8 +145,25 @@
     color: white;
 }
 
+.liked {
+    color: red;
+}
 
+@media screen and (max-width: 800px) {
+    .tweetHead {
+        /* justify-content: space-around; */
+        width: 60vw;
+    }
 
+    .postImg {
+        width: 65vw;
+    }
 
+    .iconsDiv {
+        width: 71vw;
+    }
 
-
+    .tweetContent {
+        width: 60vw;
+    }
+}

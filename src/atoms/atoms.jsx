@@ -78,3 +78,7 @@ export const popupState = atom({
 //   default:<SimpleDialogDemo/>
 // })
 
+export const logInOut = atom({
+  key: "logInOut",
+  default: {}
+})

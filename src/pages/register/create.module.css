@@ -74,3 +74,47 @@
     color: rgb(38, 81, 173);
     cursor: pointer;
 }
+
+
+@media only screen and (max-width: 600px) {
+    .main {
+    height: 100vh;
+    }
+    
+    .btnContainer {
+    width: 80vw;
+    padding: 1rem;
+    }
+    
+    .createHead {
+    font-size: 1.2rem;
+    }
+    
+    .btn {
+    width: 70vw;
+    height: 5vh;
+    font-size: 0.8rem;
+    margin-bottom: 0.5rem;
+    }
+    
+    .hr {
+    width: 70%;
+    }
+    
+    .termsdiv {
+    width: 70vw;
+    }
+    
+    .terms {
+    font-size: 0.6rem;
+    }
+    
+    .haveAcc {
+    font-size: 0.7rem;
+    }
+
+    .createHead {
+        font-size: 0.8rem;
+        width: 40vw;
+    }
+    }

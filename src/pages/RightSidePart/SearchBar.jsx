@@ -1,12 +1,13 @@
 // import React from "react";
 import searchBox from "./SearchBar.module.css";
-// import SearchIcon from "@mui/icons-material/Search";
+import {BiSearch} from 'react-icons/bi'
 
 export default function SearchBar() {
   return (
-    <div >
-      <input className={searchBox.mainDiv}
-      type="search" placeholder=" 🔍 Search Twitter" />
+    <div className={searchBox.searchContainer}>
+      <BiSearch className={searchBox.searchIcon}/>
+      <input className={searchBox.input}
+      type="search" placeholder="Search Twitter" />
     </div>
   );
 }
