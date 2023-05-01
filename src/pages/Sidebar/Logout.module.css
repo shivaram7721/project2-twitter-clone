@@ -1,0 +1,15 @@
+.btnDiv{
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    /* margin-top: 0.5rem; */
+    /* padding: 2rem; */
+}
+
+.btn{
+    padding: 1rem;
+    border-radius: 1rem;
+    margin-top: 0.5rem;
+    background-color: #1DA1F2;
+    /* color: white; */
+}

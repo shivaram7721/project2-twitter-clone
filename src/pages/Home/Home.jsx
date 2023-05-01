@@ -11,6 +11,7 @@ import FirstRightCard from "../RightSidePart/FirstRightCard";
 import SearchBar from "../RightSidePart/SearchBar";
 import SecondRightCard from "../RightSidePart/SecondRightCard";
 import Sidebar from "../Sidebar/Sidebar";
+import Logout from "../Sidebar/Logout";
 
 export function Home() {
   return (
@@ -18,6 +19,7 @@ export function Home() {
       <Grid container>
         <Grid item md={2.5} xs={1} className={homepage.rightPart}>
           <Sidebar />
+          <Logout/>
         </Grid>
 
         <Grid item md={6} xs={11}>
@@ -31,7 +33,7 @@ export function Home() {
           <SecondRightCard />
         </Grid>
       </Grid>
-      <Footer />
+      {/* <Footer /> */}
     </div>
   );
 }

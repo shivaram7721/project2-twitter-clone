@@ -83,7 +83,7 @@ export function Login() {
           return user;
         });
         localStorage.setItem("users", JSON.stringify(user));
-        navigate("/");
+        navigate("/home");
       } else {
         setMatch("Please Register");
       }
