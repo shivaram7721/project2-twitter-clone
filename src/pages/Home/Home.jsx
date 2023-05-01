@@ -31,7 +31,7 @@ export function Home() {
 // console.log(isLogin)
 
 useEffect( ()=> (
-  navigate('/login')
+  navigate('/')
 ))
 
 const isLogin = localStorage.getItem("isLogin");
