@@ -1,14 +1,12 @@
 import React from 'react'
 import logout from './Logout.module.css'
+import { useNavigate } from 'react-router-dom'
 
 export default function Logout() {
+  const navigate=useNavigate()
 
   const handleLogout = () => {
-    // Clear session data like authentication tokens or session IDs
-    sessionStorage.removeItem('authToken');
-    sessionStorage.removeItem('sessionId');
-    // Redirect user to login page
-    window.location.href = '/';
+    navigate("/")
   }
 
   return (
