@@ -26,6 +26,7 @@ function Trending({ limit }) {
         ...user,
         isFollowed: false
       }));
+      console.log(users)
       setUsers(usersWithFollowState);
     } catch (error) {
       console.log(error);
@@ -48,6 +49,7 @@ function Trending({ limit }) {
         }
         return prevUser;
       });
+      console.log(updatedUsers)
       return updatedUsers;
     });
   };
