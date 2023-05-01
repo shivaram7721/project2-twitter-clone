@@ -45,7 +45,7 @@ function Sidebar() {
       <SidebarOption Icon={PermIdentityIcon} text="Profile"  />
       <SidebarOption Icon={MoreHorizIcon} text="More" />
 
-      <Button variant="outlined" onClick={handleClickOpen} variant="outlined" className="sidebar__tweet" fullWidth>
+      <Button variant="outlined" onClick={handleClickOpen} className="sidebar__tweet" fullWidth>
         Tweet
       </Button>
       <Dialog className="dialog" open={open} onClose={handleClose}>
