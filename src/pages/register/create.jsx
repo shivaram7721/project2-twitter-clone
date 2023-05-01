@@ -46,7 +46,7 @@ export function Create() {
           </p>
           <p className={styles.haveAcc}>
             Have an account already?
-            <span onClick={() => navigate("/login")} className={styles.login}>
+            <span onClick={() => navigate("/")} className={styles.login}>
               Log in
             </span>
           </p>
