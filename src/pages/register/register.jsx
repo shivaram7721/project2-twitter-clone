@@ -129,7 +129,7 @@ export function Register() {
           isLogin: false,
         });
         localStorage.setItem("users", JSON.stringify(users));
-        navigate("/login");
+        navigate("/");
       }
     }
     setName("");
