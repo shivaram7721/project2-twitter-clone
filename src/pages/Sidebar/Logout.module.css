@@ -4,6 +4,9 @@
     align-items: center;
     /* margin-top: 0.5rem; */
     /* padding: 2rem; */
+    position: sticky;
+    top:41rem;
+
 }
 
 .btn{
