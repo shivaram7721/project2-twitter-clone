@@ -34,8 +34,6 @@ export function Tweets() {
       )
     );
   }
-  
-
 
   return (
     <div className={styles.tweetsDivMain}>

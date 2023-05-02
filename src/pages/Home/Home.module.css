@@ -14,10 +14,9 @@
   
 .rightSideBar {
   position: sticky;
-  bottom: 0;
 }
 
-/* .sideCards {
+.sideCards {
   position: sticky;
-  top: 0;
-} */
+  top: -8rem;
+}

@@ -15,7 +15,7 @@ import { TweetArea } from "../../components/tweetArea/tweetArea";
 import Dialog from '@mui/material/Dialog';
 import { Logout } from "../../components/logout/logout";
 // import TextField from '@mui/material/TextField';
-import DialogActions from '@mui/material/DialogActions';
+// import DialogActions from '@mui/material/DialogActions';
 import DialogContent from '@mui/material/DialogContent';
 import DialogContentText from '@mui/material/DialogContentText';
 import DialogTitle from '@mui/material/DialogTitle';
