@@ -4,7 +4,7 @@ import SearchIcon from "@mui/icons-material/Search";
 
 export default function SearchBar() {
   return (
-    <div>
+    <div style={{position:"sticky", top:"0.5em"}}>
       <input
         className={searchBox.mainDiv}
         type="search"
