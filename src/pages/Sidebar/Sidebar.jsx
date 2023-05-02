@@ -15,7 +15,7 @@ import { TweetArea } from "../../components/tweetArea/tweetArea";
 import Dialog from '@mui/material/Dialog';
 import { Logout } from "../../components/logout/logout";
 // import TextField from '@mui/material/TextField';
-import DialogActions from '@mui/material/DialogActions';
+// import DialogActions from '@mui/material/DialogActions';
 import DialogContent from '@mui/material/DialogContent';
 import DialogContentText from '@mui/material/DialogContentText';
 import DialogTitle from '@mui/material/DialogTitle';
@@ -45,7 +45,7 @@ function Sidebar() {
       <SidebarOption Icon={PermIdentityIcon} text="Profile"  />
       <SidebarOption Icon={MoreHorizIcon} text="More" />
 
-      <Button variant="outlined" onClick={handleClickOpen} variant="outlined" className="sidebar__tweet" fullWidth>
+      <Button variant="outlined" onClick={handleClickOpen} className="sidebar__tweet" fullWidth>
         Tweet
       </Button>
       <Dialog className="dialog" open={open} onClose={handleClose}>

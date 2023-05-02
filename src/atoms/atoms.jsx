@@ -78,7 +78,7 @@ export const popupState = atom({
 //   default:<SimpleDialogDemo/>
 // })
 
-export const logInOut = atom({
-  key: "logInOut",
-  default: {}
+export const isLogin = atom({
+  key: "isLogin",
+  default: JSON.parse(localStorage.getItem('isLogin')) || false
 })

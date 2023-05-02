@@ -22,17 +22,9 @@ export function Home() {
   const navigate = useNavigate()
 
 
-// const users = getUsers();
-
-// const isLogin = users.some( (user)=> (
-//   user.isLogin === true || user.isLogin === null
-// ))
-
-// console.log(isLogin)
-
 useEffect( ()=> (
   navigate('/')
-))
+),[])
 
 const isLogin = localStorage.getItem("isLogin");
 console.log(isLogin)
@@ -58,7 +50,7 @@ console.log(isLogin)
         </Grid>
 
         <Grid className={homepage.rightsideBar} item md={3.5}>
-          <SearchBar />
+          <SearchBar className={homepage.search}/>
           <div className={homepage.sideCards}>
           <FirstRightCard />
           <SecondRightCard />
@@ -73,4 +65,3 @@ console.log(isLogin)
     </div>
   );
 }
-
