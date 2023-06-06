@@ -11,9 +11,11 @@ import { CiExport } from "react-icons/ci";
 import { tweetsData } from "../../atoms/atoms";
 import { useRecoilState } from "recoil";
 import { useEffect } from "react";
-
 export function Tweets() {
   const [tweets, setTweets] = useRecoilState(tweetsData);
+  // const name = JSON.parse(localStorage.getItem('loginName'))
+  // const timeStamp = new Date().toLocaleString();
+  // const allTweets = getTweets();
 
   useEffect(() => {
     fetch("/tweets.json")
@@ -37,7 +39,7 @@ export function Tweets() {
 
   return (
     <div className={styles.tweetsDivMain}>
-        {tweets.map((tweet, id) => (
+        {tweets.map((tweet) => (
           <Grid className={styles.tweetsContainer} key={tweet.id} >
             <div className={styles.tweetHead}>
               <img className={styles.profileImg} src={tweet.image} />
@@ -45,25 +47,17 @@ export function Tweets() {
               <div className={styles.namePara}>
                 <div className={styles.profileHead}>
                   <span className={styles.head4}>{tweet.tweetedBy.name}</span>
-                  <span className={styles.mention}>@ChennaiIPL .2h</span>
-                  {/* <div> */}
+                  <span className={styles.mention}>@{tweet.tweetedBy.name} {tweet.createdAt}</span>
                     <span>
                       <BiDotsHorizontalRounded className={styles.dots} />
                     </span>
-                  {/* </div> */}
                 </div>
 
                 <div className={styles.tweetContent}>
                   <span className={styles.content}>{tweet.content}</span>
-                  {/* <p>
-                    <BiDotsHorizontalRounded className={styles.dots} />
-                  </p> */}
                 </div>
               </div>
               <div className={styles.dotsDiv}>
-                {/* <p>
-                  <BiDotsHorizontalRounded className={styles.dots} />
-                </p> */}
               </div>
             </div>
 

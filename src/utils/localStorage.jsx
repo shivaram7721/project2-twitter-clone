@@ -9,3 +9,15 @@ export function getUsers() {
     }
     return []
 }
+
+export function getTweets() {
+    const tweets = localStorage.getItem('tweets');
+    try {
+        if(tweets) {
+            return JSON.parse(tweets)
+        }
+    } catch (error) {
+        return []
+    }
+    return []
+}

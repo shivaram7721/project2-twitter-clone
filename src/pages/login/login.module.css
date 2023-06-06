@@ -46,6 +46,10 @@
     font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
 }
 
+.btn:hover {
+    cursor: pointer;
+}
+
 .btnd {
     border: 1px solid grey;
     width: 20rem;
@@ -54,6 +58,10 @@
     background-color: black;
     color: white;
     font-weight: 700;
+}
+
+.btnd:hover {
+    cursor: pointer;
 }
 
 .hr {
@@ -69,6 +77,8 @@
 .errMsg {
     color: red;
     font-size: .8rem;
+    text-align: center;
+    margin-bottom: 1rem;
 }
 
 .noAcc {

@@ -126,7 +126,6 @@ export function Register() {
           mobile,
           date,
           password,
-          isLogin: false,
         });
         localStorage.setItem("users", JSON.stringify(users));
         navigate('/login')
@@ -206,10 +205,6 @@ export function Register() {
       </div>
         </div>
     }
-
-
-
-      
     </div>
   );
 }
