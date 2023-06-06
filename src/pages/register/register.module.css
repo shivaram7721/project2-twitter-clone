@@ -55,19 +55,24 @@
     font-size: 1rem;
 }
 
+.btnReg:hover {
+  cursor: pointer;
+}
+
 .errMsg {
     color: red;
     font-size: .8rem;
 }
 
+.errReg {
+  font-size: 14px;
+  color: red;
+  /* margin: 5px 0; */
+  text-align: center;
+}
+
 
 @media (max-width: 600px) {
-    .Regcontainer {
-      /* padding: 10px; */
-      /* width: 60vw; */
-      /* margin: 5rem */
-
-    }
     
     .formReg {
       width: 60vw;

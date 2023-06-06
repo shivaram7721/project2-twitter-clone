@@ -1,6 +1,4 @@
-// import { useState } from "react";
 import { getUsers } from "../../utils/localStorage";
-// import { useRecoilState } from "recoil";
 import styles from './login.module.css';
 import {FcGoogle} from 'react-icons/fc'
 import {BsApple} from 'react-icons/bs'
@@ -14,20 +12,16 @@ import {
   matchState,
   // logInOut 
   } from "../../atoms/atoms";
-import { useRecoilState, useRecoilValue } from "recoil";
-// import TextField from '@mui/material/TextField';
+import { useRecoilState } from "recoil";
 
 export function Login() {
-//   const [name, setName] = useState("");
   const [email, setEmail] = useRecoilState(emailState);
   const [password, setPassword] = useRecoilState(passwordState)
 
-//   const [nameError, setNameError] = useState("");
   const [emailError, setEmailError] = useRecoilState(emailErrorState)
   const [passError, setPassError] = useRecoilState(passErrorState)
   const [match, setMatch] = useRecoilState(matchState)
-  // const [log, setLog] = useSetRecoilState(logInOut);
-
+  
   const navigate = useNavigate();
 
 
@@ -65,7 +59,6 @@ export function Login() {
   function handleSubmit(e) {
     e.preventDefault();
 
-    // const isUserNameValid = validateUserName()
     const isUserEmailValid = validateUserEmail()
     const isUserPasswordValid = validatePassword()
 
@@ -76,16 +69,13 @@ export function Login() {
             user.email === email && user.password === password
         ))
 
+        let nameIndex = users.findIndex( (user) => (
+          user.email === email && user.password === password
+      ))
+      localStorage.setItem('loginName', JSON.stringify(users[nameIndex].name))
+
     if(details && isUserEmailValid && isUserPasswordValid) {
-        let user = users.filter( (user) => {
-            if(user.email === email) {
-                user.isLogin = true
-            }
-            return user
-        })
-        localStorage.setItem('users', JSON.stringify(user))
         localStorage.setItem('isLogin', JSON.stringify(true))
-        // setLog(user)
         navigate('/')
     } else {
         setMatch('Please Register')
@@ -94,6 +84,11 @@ export function Login() {
     // setName('');
     setEmail('');
     setPassword('')
+  }
+
+  function handleNoAcc() {
+    navigate('/register')
+    setMatch('')
   }
 
   return (
@@ -111,25 +106,6 @@ export function Login() {
         <button className={styles.btn}><BsApple />Sign in with Apple</button>
 
         <span className={styles.hr}/>
-
-
-        {/* <TextField
-          required
-          id="outlined-required"
-          label="Required"
-          defaultValue="Hello World"
-          className={styles.textField}
-        /> */}
-
-
-        {/* <input
-          type="text"
-          onChange={(e) => setName(e.target.value)}
-          value={name}
-          placeholder="name"
-          className={styles.inputlog}
-        />
-        {<span className={styles.errMsg}>{nameError}</span>} */}
 
         <input
           type="email"
@@ -152,7 +128,7 @@ export function Login() {
         <button className={styles.btn} type="submit">Login</button>
 
         <button className={styles.btnd}>Forgot password?</button>
-        <p className={styles.noAcc}>Don't have an account?<span onClick={()=>navigate('/register')} className={styles.signup}>Sign up</span></p>
+        <p className={styles.noAcc}>Don't have an account?<span onClick={handleNoAcc} className={styles.signup}>Sign up</span></p>
       </form>
       </div>
     </div>
