@@ -22,13 +22,12 @@ export function Home() {
   const navigate = useNavigate()
 
 
-useEffect( ()=> (
-  navigate('/')
-),[])
-
-const isLogin = localStorage.getItem("isLogin");
-console.log(isLogin)
-
+  useEffect(() => {
+    if (!isLogin) {
+      navigate("/login");
+    }
+  }, []);
+  const isLogin = JSON.parse(localStorage.getItem("isLogin"));
 
   return (
     <div>
