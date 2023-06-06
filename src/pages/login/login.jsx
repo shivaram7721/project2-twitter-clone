@@ -75,8 +75,21 @@ export function Login() {
       localStorage.setItem('loginName', JSON.stringify(users[nameIndex].name))
 
     if(details && isUserEmailValid && isUserPasswordValid) {
+        let user = users.filter( (user) => {
+            if(user.email === email) {
+                user.isLogin = true
+            }
+            return user
+        })
+        localStorage.setItem('users', JSON.stringify(user))
         localStorage.setItem('isLogin', JSON.stringify(true))
-        navigate('/')
+        // setLog(user)
+        const isLogin = JSON.parse(localStorage.getItem(isLogin))
+        if(isLogin) {
+          navigate('/')
+        } else {
+          navigate('login')
+        }
     } else {
         setMatch('Please Register')
     }
@@ -128,7 +141,7 @@ export function Login() {
         <button className={styles.btn} type="submit">Login</button>
 
         <button className={styles.btnd}>Forgot password?</button>
-        <p className={styles.noAcc}>Don't have an account?<span onClick={handleNoAcc} className={styles.signup}>Sign up</span></p>
+        <p className={styles.noAcc}>Don`&apos;`t have an account?<span onClick={handleNoAcc} className={styles.signup}>Sign up</span></p>
       </form>
       </div>
     </div>
