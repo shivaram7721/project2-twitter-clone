@@ -128,6 +128,7 @@ export function Register() {
           password,
         });
         localStorage.setItem("users", JSON.stringify(users));
+        // localStorage.setItem('isLogin', JSON.stringify(false))
         navigate('/login')
       }
       
