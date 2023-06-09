@@ -4,7 +4,7 @@ This is a twitter clone, where user can able to create account, login with valid
 
 ## Create Account page
 
-![create account screenshot](./public/assets/create.png)
+![create account screenshot](./public/assets/create.jpg)
 
 ## Register page
 
