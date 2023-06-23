@@ -8,15 +8,15 @@ This is a twitter clone, where user can able to create account, login with valid
 
 ## Register page
 
-![Register page screenshot](./public/assets/register.png)
+![Register page screenshot](./public/assets/register.jpg)
 
 ## Login page
 
-![Login page screenshot](./public/assets/login.png)
+![Login page screenshot](./public/assets/login.jpg)
 
 ## Home page
 
-![Home page screenshot](./public/assets/home.png)
+![Home page screenshot](./public/assets/home.jpg)
 
 ## Deployment:
 This project is deployed on open platform [vercel.com](https://vercel.com/) 
