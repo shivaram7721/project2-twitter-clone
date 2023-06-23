@@ -4,19 +4,19 @@ This is a twitter clone, where user can able to create account, login with valid
 
 ## Create Account page
 
-![create account screenshot](./public/assets/create.jpg)
+![create account screenshot](./public/assets/create.png)
 
 ## Register page
 
-![Register page screenshot](./public/assets/register.jpg)
+![Register page screenshot](./public/assets/register.png)
 
 ## Login page
 
-![Login page screenshot](./public/assets/login.jpg)
+![Login page screenshot](./public/assets/login.png)
 
 ## Home page
 
-![Home page screenshot](./public/assets/home.jpg)
+![Home page screenshot](./public/assets/home.png)
 
 ## Deployment:
 This project is deployed on open platform [vercel.com](https://vercel.com/) 
